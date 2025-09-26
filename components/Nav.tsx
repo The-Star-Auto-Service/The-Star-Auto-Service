@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
+
 export default function Nav(){
   return (
     <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:50,background:"linear-gradient(180deg,rgba(0,0,0,.95),rgba(0,0,0,.7))",backdropFilter:"blur(12px)",boxShadow:"0 10px 40px rgba(251,191,36,.2)"}}>
       <div className="container" style={{ display:"flex", alignItems:"center", justifyContent:"space-between", height:80 }}>
         <Link href="/" className="logo" style={{ color:"var(--accent-yellow)", fontWeight:900, letterSpacing:2, textDecoration:"none", display:"flex", alignItems:"center", gap:10 }}>
-          <img src="/logo-star.svg" width={28} height={28} alt="Star" />
+          <Image src="/logo-star.svg" width={28} height={28} alt="Star" priority />
           The Star Auto Service
         </Link>
         <ul style={{ listStyle:"none", display:"flex", gap:"2rem" }}>
